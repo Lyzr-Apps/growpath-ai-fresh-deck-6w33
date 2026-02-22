@@ -1,0 +1,106 @@
+{
+  "agent_name": "Admin Analytics Agent",
+  "agent_id": "699a8fdfb0da46f6ada21cc9",
+  "description": "Compiles platform-wide user analytics, engagement metrics, skill demand patterns, drop-off analysis, and college onboarding summaries for admin governance.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "user_metrics": {
+      "total_users": "number",
+      "active_users": "number",
+      "new_users_this_month": "number",
+      "drop_off_rate": "number",
+      "avg_session_duration": "string"
+    },
+    "engagement_metrics": {
+      "daily_active_percentage": "number",
+      "weekly_active_percentage": "number",
+      "monthly_active_percentage": "number",
+      "avg_assessments_per_user": "number",
+      "skill_exchanges_completed": "number"
+    },
+    "skill_demand": [
+      {
+        "skill_name": "string",
+        "demand_score": "number",
+        "supply_count": "number",
+        "demand_count": "number",
+        "trend": "string"
+      }
+    ],
+    "college_summaries": [
+      {
+        "college_name": "string",
+        "total_students": "number",
+        "active_students": "number",
+        "avg_readiness_score": "number",
+        "top_career_paths": [
+          "string"
+        ]
+      }
+    ],
+    "drop_off_analysis": {
+      "assessment_completion_rate": "number",
+      "step_wise_drop_off": [
+        "string"
+      ],
+      "common_exit_points": [
+        "string"
+      ],
+      "recommendations": [
+        "string"
+      ]
+    },
+    "report_generated_at": "string"
+  },
+  "example_response": {
+    "user_metrics": {
+      "total_users": 0,
+      "active_users": 0,
+      "new_users_this_month": 0,
+      "drop_off_rate": 0,
+      "avg_session_duration": "sample string"
+    },
+    "engagement_metrics": {
+      "daily_active_percentage": 0,
+      "weekly_active_percentage": 0,
+      "monthly_active_percentage": 0,
+      "avg_assessments_per_user": 0,
+      "skill_exchanges_completed": 0
+    },
+    "skill_demand": [
+      {
+        "skill_name": "sample string",
+        "demand_score": 0,
+        "supply_count": 0,
+        "demand_count": 0,
+        "trend": "sample string"
+      }
+    ],
+    "college_summaries": [
+      {
+        "college_name": "sample string",
+        "total_students": 0,
+        "active_students": 0,
+        "avg_readiness_score": 0,
+        "top_career_paths": [
+          "sample string"
+        ]
+      }
+    ],
+    "drop_off_analysis": {
+      "assessment_completion_rate": 0,
+      "step_wise_drop_off": [
+        "sample string"
+      ],
+      "common_exit_points": [
+        "sample string"
+      ],
+      "recommendations": [
+        "sample string"
+      ]
+    },
+    "report_generated_at": "sample string"
+  }
+}

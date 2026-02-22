@@ -1,0 +1,66 @@
+{
+  "agent_name": "LifeGPS Decision Agent",
+  "agent_id": "699a8fdeadf9a88c8206a739",
+  "description": "Processes personality traits, skill levels, financial background, family expectations, risk tolerance, interests, and academic history through a weighted scoring algorithm. Outputs 3 career paths (Safe, Balanced, High Growth) with 5-year income projections, risk scores, growth curves, stability scores, and skill gap analysis with time-to-mastery estimates. Uses Perplexity built-in web search for real-time market demand and salary data.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "career_paths": [
+      {
+        "path_type": "string",
+        "career_title": "string",
+        "description": "string",
+        "risk_score": "number",
+        "stability_score": "number",
+        "growth_potential": "string",
+        "year_1_income": "string",
+        "year_3_income": "string",
+        "year_5_income": "string",
+        "required_skills": [
+          "string"
+        ],
+        "missing_skills": [
+          "string"
+        ],
+        "time_to_mastery": "string",
+        "growth_curve": "string",
+        "market_demand": "string"
+      }
+    ],
+    "risk_alerts": [
+      "string"
+    ],
+    "overall_recommendation": "string",
+    "assessment_summary": "string"
+  },
+  "example_response": {
+    "career_paths": [
+      {
+        "path_type": "sample string",
+        "career_title": "sample string",
+        "description": "sample string",
+        "risk_score": 0,
+        "stability_score": 0,
+        "growth_potential": "sample string",
+        "year_1_income": "sample string",
+        "year_3_income": "sample string",
+        "year_5_income": "sample string",
+        "required_skills": [
+          "sample string"
+        ],
+        "missing_skills": [
+          "sample string"
+        ],
+        "time_to_mastery": "sample string",
+        "growth_curve": "sample string",
+        "market_demand": "sample string"
+      }
+    ],
+    "risk_alerts": [
+      "sample string"
+    ],
+    "overall_recommendation": "sample string",
+    "assessment_summary": "sample string"
+  }
+}

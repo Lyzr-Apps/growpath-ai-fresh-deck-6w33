@@ -1,0 +1,112 @@
+{
+  "agent_name": "Growth Evaluator Agent",
+  "agent_id": "699a8fdfb0da46f6ada21cc7",
+  "description": "Computes Skill Readiness Score (0-100), Career Alignment Index, Confidence Score based on user progress data. Generates monthly AI re-evaluation reports, AI-powered resumes, and portfolio page content.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "skill_readiness_score": "number",
+    "career_alignment_index": "number",
+    "confidence_score": "number",
+    "monthly_report": {
+      "summary": "string",
+      "strengths": [
+        "string"
+      ],
+      "improvement_areas": [
+        "string"
+      ],
+      "milestones_achieved": [
+        "string"
+      ],
+      "next_month_goals": [
+        "string"
+      ]
+    },
+    "resume_content": {
+      "professional_summary": "string",
+      "key_skills": [
+        "string"
+      ],
+      "achievements": [
+        "string"
+      ],
+      "education": "string",
+      "projects": [
+        "string"
+      ],
+      "certifications": [
+        "string"
+      ]
+    },
+    "portfolio_content": {
+      "headline": "string",
+      "bio": "string",
+      "featured_skills": [
+        "string"
+      ],
+      "showcase_projects": [
+        "string"
+      ]
+    },
+    "progress_trend": "string",
+    "learning_streak_days": "number"
+  },
+  "example_response": {
+    "skill_readiness_score": 0,
+    "career_alignment_index": 0,
+    "confidence_score": 0,
+    "monthly_report": {
+      "summary": "sample string",
+      "strengths": [
+        "sample string"
+      ],
+      "improvement_areas": [
+        "sample string"
+      ],
+      "milestones_achieved": [
+        "sample string"
+      ],
+      "next_month_goals": [
+        "sample string"
+      ]
+    },
+    "resume_content": {
+      "professional_summary": "sample string",
+      "key_skills": [
+        "sample string"
+      ],
+      "achievements": [
+        "sample string"
+      ],
+      "education": "sample string",
+      "projects": [
+        "sample string"
+      ],
+      "certifications": [
+        "sample string"
+      ]
+    },
+    "portfolio_content": {
+      "headline": "sample string",
+      "bio": "sample string",
+      "featured_skills": [
+        "sample string"
+      ],
+      "showcase_projects": [
+        "sample string"
+      ]
+    },
+    "progress_trend": "sample string",
+    "learning_streak_days": 0
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/file.pdf"
+      }
+    ]
+  }
+}

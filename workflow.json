@@ -1,0 +1,137 @@
+{
+  "name": "GrowPath AI - Youth Career Intelligence Platform",
+  "description": "A multi-agent platform for youth career planning featuring career path generation, skill matching, growth evaluation, and admin analytics.",
+  "pattern": "multiple_independent_agents",
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Input",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "lifegps_agent",
+      "type": "Agent",
+      "label": "LifeGPS Decision Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699a8fdeadf9a88c8206a739",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.3,
+      "top_p": 1
+    },
+    {
+      "id": "skillswap_agent",
+      "type": "Agent",
+      "label": "SkillSwap Matching Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699a8fdfc2eec05acd279dd3",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 0.95
+    },
+    {
+      "id": "growth_agent",
+      "type": "Agent",
+      "label": "Growth Evaluator Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699a8fdfb0da46f6ada21cc7",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1
+    },
+    {
+      "id": "admin_agent",
+      "type": "Agent",
+      "label": "Admin Analytics Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699a8fdfb0da46f6ada21cc9",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1
+    },
+    {
+      "id": "output_lifegps",
+      "type": "Output",
+      "label": "Career Paths Output",
+      "nodeCategory": "end"
+    },
+    {
+      "id": "output_skillswap",
+      "type": "Output",
+      "label": "Skill Matches Output",
+      "nodeCategory": "end"
+    },
+    {
+      "id": "output_growth",
+      "type": "Output",
+      "label": "Growth Report Output",
+      "nodeCategory": "end"
+    },
+    {
+      "id": "output_admin",
+      "type": "Output",
+      "label": "Admin Analytics Output",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    { "source": "input_node", "target": "lifegps_agent" },
+    { "source": "input_node", "target": "skillswap_agent" },
+    { "source": "input_node", "target": "growth_agent" },
+    { "source": "input_node", "target": "admin_agent" },
+    { "source": "lifegps_agent", "target": "output_lifegps" },
+    { "source": "skillswap_agent", "target": "output_skillswap" },
+    { "source": "growth_agent", "target": "output_growth" },
+    { "source": "admin_agent", "target": "output_admin" }
+  ],
+  "agents": [
+    {
+      "name": "LifeGPS Decision Agent",
+      "agent_id": "699a8fdeadf9a88c8206a739",
+      "type": "independent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.3,
+      "top_p": 1,
+      "capabilities": ["text"],
+      "trigger": "Generate My Career Paths on Assessment Screen"
+    },
+    {
+      "name": "SkillSwap Matching Agent",
+      "agent_id": "699a8fdfc2eec05acd279dd3",
+      "type": "independent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 0.95,
+      "capabilities": ["text"],
+      "trigger": "Find Matches on SkillSwap Screen"
+    },
+    {
+      "name": "Growth Evaluator Agent",
+      "agent_id": "699a8fdfb0da46f6ada21cc7",
+      "type": "independent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "capabilities": ["text"],
+      "trigger": "Evaluate My Progress on Dashboard / Generate Resume on Resume Screen"
+    },
+    {
+      "name": "Admin Analytics Agent",
+      "agent_id": "699a8fdfb0da46f6ada21cc9",
+      "type": "independent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "capabilities": ["text"],
+      "trigger": "Generate Analytics on Admin Panel"
+    }
+  ]
+}

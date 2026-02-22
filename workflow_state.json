@@ -1,0 +1,57 @@
+{
+  "project": "GrowPath AI - Youth Career Intelligence Platform",
+  "pattern": "multiple_independent_agents",
+  "status": "agents_created",
+  "agents": {
+    "lifegps_decision_agent": {
+      "agent_id": "699a8fdeadf9a88c8206a739",
+      "name": "LifeGPS Decision Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.3,
+      "top_p": 1,
+      "type": "independent",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/lifegps_decision_agent_response.json"
+    },
+    "skillswap_matching_agent": {
+      "agent_id": "699a8fdfc2eec05acd279dd3",
+      "name": "SkillSwap Matching Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 0.95,
+      "type": "independent",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/skillswap_matching_agent_response.json"
+    },
+    "growth_evaluator_agent": {
+      "agent_id": "699a8fdfb0da46f6ada21cc7",
+      "name": "Growth Evaluator Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "type": "independent",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/growth_evaluator_agent_response.json"
+    },
+    "admin_analytics_agent": {
+      "agent_id": "699a8fdfb0da46f6ada21cc9",
+      "name": "Admin Analytics Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "type": "independent",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/admin_analytics_agent_response.json"
+    }
+  },
+  "agent_ids": [
+    "699a8fdeadf9a88c8206a739",
+    "699a8fdfc2eec05acd279dd3",
+    "699a8fdfb0da46f6ada21cc7",
+    "699a8fdfb0da46f6ada21cc9"
+  ]
+}

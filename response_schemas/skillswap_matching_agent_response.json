@@ -1,0 +1,104 @@
+{
+  "agent_name": "SkillSwap Matching Agent",
+  "agent_id": "699a8fdfc2eec05acd279dd3",
+  "description": "Analyzes user skill profiles (skills possessed and desired) and matches users with peers for skill exchange, mentors, and group learning circles. Generates personalized weekly improvement plans and skill mastery recommendations.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "peer_matches": [
+      {
+        "name": "string",
+        "compatibility_score": "number",
+        "skills_they_offer": [
+          "string"
+        ],
+        "skills_they_want": [
+          "string"
+        ],
+        "skill_overlap": "string",
+        "recommendation": "string"
+      }
+    ],
+    "mentor_suggestions": [
+      {
+        "name": "string",
+        "expertise": [
+          "string"
+        ],
+        "mentorship_focus": "string",
+        "experience_years": "number",
+        "rating": "number"
+      }
+    ],
+    "group_circles": [
+      {
+        "circle_name": "string",
+        "focus_skill": "string",
+        "member_count": "number",
+        "difficulty_level": "string",
+        "meeting_schedule": "string"
+      }
+    ],
+    "weekly_plan": {
+      "goals": [
+        "string"
+      ],
+      "daily_tasks": [
+        "string"
+      ],
+      "recommended_resources": [
+        "string"
+      ],
+      "focus_area": "string"
+    }
+  },
+  "example_response": {
+    "peer_matches": [
+      {
+        "name": "sample string",
+        "compatibility_score": 0,
+        "skills_they_offer": [
+          "sample string"
+        ],
+        "skills_they_want": [
+          "sample string"
+        ],
+        "skill_overlap": "sample string",
+        "recommendation": "sample string"
+      }
+    ],
+    "mentor_suggestions": [
+      {
+        "name": "sample string",
+        "expertise": [
+          "sample string"
+        ],
+        "mentorship_focus": "sample string",
+        "experience_years": 0,
+        "rating": 0
+      }
+    ],
+    "group_circles": [
+      {
+        "circle_name": "sample string",
+        "focus_skill": "sample string",
+        "member_count": 0,
+        "difficulty_level": "sample string",
+        "meeting_schedule": "sample string"
+      }
+    ],
+    "weekly_plan": {
+      "goals": [
+        "sample string"
+      ],
+      "daily_tasks": [
+        "sample string"
+      ],
+      "recommended_resources": [
+        "sample string"
+      ],
+      "focus_area": "sample string"
+    }
+  }
+}
